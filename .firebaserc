@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-universal-blog": {
+      "hosting": {
+        "angular-universal-blog": [
+          "angular-universal-blog"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-universal-blog"
+  }
+}
