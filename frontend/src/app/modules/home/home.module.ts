@@ -1,12 +1,19 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./pages/home/home.component";
+import { HeaderComponent } from "./components/header/header.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { MainComponent } from "./pages/main/main.component";
+
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { HomeRoutingModule } from "./home-routing.module";
 import { SharedModule } from "../../shared/shared.module";
+import { HomeMaterialModule } from "./home-material.module";
+import { MatDividerModule } from "@angular/material/divider";
 
 @NgModule({
-  declarations: [HomeComponent],
-  imports: [CommonModule, SharedModule, HomeRoutingModule],
+  declarations: [HomeComponent, HeaderComponent, FooterComponent, MainComponent],
+  imports: [CommonModule, FlexLayoutModule, SharedModule, HomeMaterialModule, HomeRoutingModule],
 })
 export class HomeModule {}

@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
+import { BrowserModule, BrowserTransferStateModule } from "@angular/platform-browser";
 
 import { AppComponent } from "./app.component";
 
@@ -22,6 +22,7 @@ import { HomeModule } from "./modules/home/home.module";
     provideFirestore(() => getFirestore()),
     provideFunctions(() => getFunctions()),
     BrowserAnimationsModule,
+    BrowserTransferStateModule,
     HomeModule,
     SharedModule,
     AppRoutingModule,
