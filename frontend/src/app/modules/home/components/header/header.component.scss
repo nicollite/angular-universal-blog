@@ -1,0 +1,9 @@
+.nav {
+  padding: 0 15px;
+  max-width: 1060px;
+  width: 100%;
+
+  a:not(:first-child) {
+    padding: 20px 24px;
+  }
+}

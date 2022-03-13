@@ -1,0 +1,50 @@
+:host,
+.post-list {
+  width: 100%;
+}
+
+.post {
+  margin: 5px 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.post-date {
+  font-size: 12px;
+  color: #757575;
+}
+
+.author-date-separator {
+  margin: 0px 4px;
+}
+
+.author,
+.subtitle {
+  font-size: 16px;
+}
+
+.subtitle {
+  margin-bottom: 5px;
+}
+
+img {
+  width: 120px;
+  height: 120px;
+}
+
+.tags {
+  & > span {
+    border-radius: 100px;
+    padding: 2px 8px;
+    background-color: rgba(242, 242, 242, 1);
+    transition: background 300ms ease 0s;
+  }
+  & > span:hover {
+    background-color: rgb(230, 230, 230);
+  }
+}
