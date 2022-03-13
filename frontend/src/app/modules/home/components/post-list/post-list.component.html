@@ -1,0 +1,32 @@
+<div class="post-list" fxLayout="column" fxLayoutAlign="center">
+  <div *ngFor="let post of posts">
+    <div class="post">
+      <a fxLayout="row" fxLayoutAlign="space-between">
+        <div fxLayout="column">
+          <a fxLayout="column">
+            <h1 class="title">{{ post.title }}</h1>
+
+            <h3 class="subtitle">
+              {{ post.subtitle }}
+            </h3>
+
+            <div fxLayout="row">
+              <span class="author">{{ post.author.name }}</span>
+              <span class="author-date-separator">&#8226;</span>
+              <span class="post-date">{{ $any(post.postDate) | date: "d MMM, y" }}</span>
+            </div>
+          </a>
+
+          <div class="tags" fxLayout="row" fxLayoutGap="5px">
+            <span *ngFor="let tag of post.tags">{{ tag }}</span>
+          </div>
+        </div>
+
+        <a>
+          <img [src]="post.img" [alt]="post.title" />
+        </a>
+      </a>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</div>
