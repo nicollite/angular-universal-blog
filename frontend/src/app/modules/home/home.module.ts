@@ -14,9 +14,10 @@ import { PostListComponent } from './components/post-list/post-list.component';
 import { PostComponent } from './pages/post/post.component';
 import { AuthorAndDateComponent } from './components/author-and-date/author-and-date.component';
 import { TagListComponent } from './components/tag-list/tag-list.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, FooterComponent, MainComponent, PostListComponent, PostComponent, AuthorAndDateComponent, TagListComponent],
+  declarations: [HomeComponent, HeaderComponent, FooterComponent, MainComponent, PostListComponent, PostComponent, AuthorAndDateComponent, TagListComponent, PageNotFoundComponent],
   imports: [CommonModule, FlexLayoutModule, SharedModule, HomeMaterialModule, HomeRoutingModule],
 })
 export class HomeModule {}
