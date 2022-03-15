@@ -1,0 +1,54 @@
+.post {
+  width: 100%;
+}
+
+.post-content {
+  max-width: 760px;
+  margin-top: 20px;
+
+  & > * {
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 46px;
+  line-height: 56px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+
+app-author-and-date {
+  margin-bottom: 16px;
+}
+
+img {
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+.post-body {
+  .post-body-titles h2 {
+    line-height: 36px;
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  .post-body-subtitles h3 {
+    @extend .subtitle;
+  }
+
+  .post-paragraph p {
+    margin-bottom: 32px;
+  }
+}
+
+app-tag-list {
+  margin-bottom: 32px;
+}

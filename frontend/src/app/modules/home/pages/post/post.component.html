@@ -1,0 +1,35 @@
+<div *ngIf="post" class="post" fxLayoutAlign="center">
+  <div class="post-content" fxLayout="column" fxLayoutAlign="center">
+    <h1 class="title">{{ post.title }}</h1>
+    <h3 class="subtitle">{{ post.subtitle }}</h3>
+    <app-author-and-date [author]="post.author.name" [date]="post.postDate"></app-author-and-date>
+
+    <div class="main-img" fxLayoutAlign="center">
+      <img [src]="post.img" [alt]="post.title" />
+    </div>
+
+    <div class="post-body">
+      <ng-container *ngFor="let content of post.content" [ngSwitch]="content.type">
+        <div *ngSwitchCase="'title'" class="post-body-title">
+          <h2>{{ $any(content).text }}</h2>
+        </div>
+
+        <div *ngSwitchCase="'subtitle'" class="post-body-subtitle">
+          <h2>{{ $any(content).text }}</h2>
+        </div>
+
+        <div *ngSwitchCase="'paragraph'" class="post-paragraph">
+          <p>
+            {{ $any(content).text }}
+          </p>
+        </div>
+
+        <div *ngSwitchCase="'image'" class="post-img" fxLayoutAlign="center">
+          <img [src]="$any(content).imgSrc" alt="" />
+        </div>
+      </ng-container>
+    </div>
+
+    <app-tag-list [tags]="post.tags"></app-tag-list>
+  </div>
+</div>
