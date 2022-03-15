@@ -11,9 +11,12 @@ import { HomeRoutingModule } from "./home-routing.module";
 import { SharedModule } from "../../shared/shared.module";
 import { HomeMaterialModule } from "./home-material.module";
 import { PostListComponent } from './components/post-list/post-list.component';
+import { PostComponent } from './pages/post/post.component';
+import { AuthorAndDateComponent } from './components/author-and-date/author-and-date.component';
+import { TagListComponent } from './components/tag-list/tag-list.component';
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, FooterComponent, MainComponent, PostListComponent],
+  declarations: [HomeComponent, HeaderComponent, FooterComponent, MainComponent, PostListComponent, PostComponent, AuthorAndDateComponent, TagListComponent],
   imports: [CommonModule, FlexLayoutModule, SharedModule, HomeMaterialModule, HomeRoutingModule],
 })
 export class HomeModule {}
