@@ -4,7 +4,9 @@ export interface Post {
   id: string;
   title: string;
   postDate: string | Date | Timestamp;
-  author: any;
+  author: {
+    name: string;
+  };
   subtitle: string;
   tags: string[];
   img: string;
