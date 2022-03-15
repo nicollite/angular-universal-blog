@@ -1,5 +1,6 @@
 import "zone.js/dist/zone-node";
 import "zone.js/dist/zone-patch-rxjs";
+import "reflect-metadata";
 
 import { ngExpressEngine } from "@nguniversal/express-engine";
 import * as express from "express";
@@ -12,6 +13,9 @@ import { existsSync } from "fs";
 // @ts-ignore
 globalThis.self = globalThis;
 globalThis.fetch = require("node-fetch").default;
+
+(global as any).WebSocket = require("ws");
+(global as any).XMLHttpRequest = require("xhr2");
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {

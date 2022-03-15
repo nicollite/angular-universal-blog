@@ -31,9 +31,9 @@ export class PostPageResolver implements Resolve<void> {
       if (isPlatformServer(this.platformId)) {
         post.postDate = (post.postDate as Timestamp).toDate();
         this.transferState.set(POST_KEY, post);
-      } else {
-        this.postService.setCurrentPost(post);
       }
+
+      this.postService.setCurrentPost(post);
     }
   }
 }
