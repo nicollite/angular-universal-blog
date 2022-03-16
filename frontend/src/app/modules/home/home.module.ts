@@ -15,9 +15,10 @@ import { PostComponent } from './pages/post/post.component';
 import { AuthorAndDateComponent } from './components/author-and-date/author-and-date.component';
 import { TagListComponent } from './components/tag-list/tag-list.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { WipComponent } from './pages/wip/wip.component';
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, FooterComponent, MainComponent, PostListComponent, PostComponent, AuthorAndDateComponent, TagListComponent, PageNotFoundComponent],
+  declarations: [HomeComponent, HeaderComponent, FooterComponent, MainComponent, PostListComponent, PostComponent, AuthorAndDateComponent, TagListComponent, PageNotFoundComponent, WipComponent],
   imports: [CommonModule, FlexLayoutModule, SharedModule, HomeMaterialModule, HomeRoutingModule],
 })
 export class HomeModule {}
