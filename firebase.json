@@ -34,5 +34,8 @@
   ],
   "functions": {
     "source": "frontend/dist/angular-universal-blog/functions"
+  },
+  "firestore": {
+    "rules": "firestore.rules"
   }
 }
